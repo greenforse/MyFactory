@@ -1,5 +1,5 @@
 from faktory import Factory
-from detail import ColaBootle , ColaEtiketka , ColaKriwka
+from detail import ColaBootle , ColaEtiketka , ColaKriwka, ColaGazirovka
 class ColaControlFactory(Factory):
     def createBootle(self):
         return ColaBootle()
@@ -9,3 +9,6 @@ class ColaControlFactory(Factory):
 
     def createKriwka(self):
         return ColaKriwka()
+
+    def createGazirovka(self):
+        return ColaGazirovka()

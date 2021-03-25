@@ -1,40 +1,38 @@
 from abc import ABCMeta, abstractmethod
 class Bootle(metaclass=ABCMeta):
-    @abstractmethod
-    def call(self):
-        pass
-
-
+    pass
 class Etiketka(metaclass=ABCMeta):
-    @abstractmethod
-    def call(self):
-        pass
-
+    pass
 class Kriwka(metaclass=ABCMeta):
-   @abstractmethod
-   def call(self):
-       pass
+    pass
+class Gazirovka(metaclass=ABCMeta):
+    pass
 
 class PepsiBootle(Bootle):
-    def call(self):
-        pass
-
+    pass
 class ColaBootle(Bootle):
-    def call(self):
-        pass
+    pass
 
-class PepsiEtikentka(Etiketka):
-    def call(self):
-        pass
+class PepsiEtiketka(Etiketka):
+    def __init__(self):
+        print ("Наклеена Этикетка пепси")
 
-class ColaEtikentka(Etiketka):
-    def call(self):
-        pass  
+class ColaEtiketka(Etiketka):
+    def __init__(self):
+        print ("Наклеена Этикетка COLA")
 
 class PepsiKriwka(Kriwka):
-    def call(self):
-        pass
+    def __init__(self):
+        print ("Закрыта крышкой Пепси")
 
 class ColaKriwka(Kriwka):
-    def call(self):
-        pass
+     def __init__(self):
+        print ("Закрыта крышкой Кола")
+
+class ColaGazirovka(Gazirovka):
+    def __init__(self):
+        print ("Налита газировка Cola")
+
+class PepsiGazirovka(Gazirovka):
+    def __init__(self):
+        print ("Налита газировка pepsi")

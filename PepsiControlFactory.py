@@ -2,10 +2,13 @@ from faktory import Factory
 import detail
 class PepsiControlFactory(Factory):
     def createBootle(self):
-        return PepsiBootle()
+        return detail.PepsiBootle()
         
     def createEtiketka(self):
-        return PepsiEtiketka()
+        return detail.PepsiEtiketka()
 
     def createKriwka(self):
-        return PepsiKriwka()
+        return detail.PepsiKriwka()
+
+    def createGazirovka(self):
+        return detail.PepsiGazirovka()
