@@ -12,3 +12,6 @@ class Factory(metaclass=ABCMeta):
     def createKriwka(self,prod):
         #return prod.Kriwka
         pass
+    @abstractmethod
+    def createGazirovka(self,prod):
+        pass

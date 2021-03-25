@@ -7,20 +7,24 @@ class Product():
         self.gazirovka = None
         self.kriwka = None
 class Bilder():
-    def __init__(self):
-        self.product= Product
+    def __init__(self,faktory):
+        self.faktory = faktory
+        self.product = Product
 
-    def takeBootle(self,faktory):
-        self.product.bootle=faktory.createBootle()
+    def takeBootle(self):
+        self.product.bootle=self.faktory.createBootle()
 
-    def StickEtiketka(self,faktory):
-        self.product.etiketka=faktory.createEtiketka()
+    def StickEtiketka(self):
+        self.product.etiketka=self.faktory.createEtiketka()
+        self.product.bootle.StickEtiketka()
     
-    def NalivGazirovki(self,faktory):
-        self.product.gazirovka=faktory.createGazirovka()
+    def NalivGazirovki(self):
+        self.product.gazirovka=self.faktory.createGazirovka()
+        self.product.bootle.NalivGazirovki()
 
-    def ZakrKriwkoi(self,faktory):
-        self.product.kriwka=faktory.createKriwka()
+    def ZakrKriwkoi(self):
+        self.product.kriwka=self.faktory.createKriwka()
+        self.product.bootle.ZakrKriwkoi()
 
     def bildProduct(self):
         #self.setParam_1(n)
