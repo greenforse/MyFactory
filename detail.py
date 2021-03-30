@@ -16,25 +16,42 @@ class Gazirovka(metaclass=ABCMeta):
     pass
 
 class PepsiBootle(Bootle):
+    def __init__(self):
+        self.etiketka=None
+        self.kriwka=None
+        self.gazirovka= None
+        print("Взята бутылочка PEPSI")
 
     def StickEtiketka(self):
-        print(f"наклеена{PepsiEtiketka}")
+        print(f"наклеена",end="")
+        self.etiketka=PepsiEtiketka()
     
     def NalivGazirovki(self):
-        print(f"залита{PepsiGazirovka()}")
+        print(f"залита",end="")
+        self.gazirovka= PepsiGazirovka()
     
     def ZakrKriwkoi(self):
-        print(f"заркыто{PepsiKriwka()}")
+        print(f"заркыто",end="")
+        self.kriwka=PepsiKriwka()
     
 class ColaBootle(Bootle):
+    def __init__(self):
+        self.etikitka = None
+        self.kriwka = None
+        self.gazirovka = None
+        print("Взята Бутылка CocaColЫ")
     def StickEtiketka(self):
-        print(f"наклеена{ColaEtiketka()}")
+        print("наклеена",end="")
+        self.etikitka=ColaEtiketka()
+        #print(f"наклеена{ColaEtiketka()}")
     
     def NalivGazirovki(self):
-        print(f"залита{ColaGazirovka()}")
+        print("Залита",end="")
+        self.gazirovka = ColaGazirovka()
     
     def ZakrKriwkoi(self):
-        print(f"заркыто{ColaKriwka()}")
+        print("закрыта",end="")
+        self.kriwka = ColaKriwka()
 
 class PepsiEtiketka(Etiketka):
     def __init__(self):
