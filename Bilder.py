@@ -9,13 +9,16 @@ class Bilder():
         self.bootle=self.faktory.createBootle()
 
     def StickEtiketka(self):
-        self.bootle.StickEtiketka()
+        etiketka = self.faktory.createEtiketka()
+        self.bootle.StickEtiketka(etiketka)
     
     def NalivGazirovki(self):
-        self.bootle.NalivGazirovki()
+        gazirovka=self.faktory.createGazirovka()
+        self.bootle.NalivGazirovki(gazirovka)
 
     def ZakrKriwkoi(self):
-        self.bootle.ZakrKriwkoi()
+        kriwka=self.faktory.createKriwka()
+        self.bootle.ZakrKriwkoi(kriwka)
 
     def bildProduct(self):
         #self.setParam_1(n)

@@ -22,17 +22,17 @@ class PepsiBootle(Bootle):
         self.gazirovka= None
         print("Взята бутылочка PEPSI")
 
-    def StickEtiketka(self):
-        print(f"наклеена",end="")
-        self.etiketka=PepsiEtiketka()
+    def StickEtiketka(self,etiketka):
+        print(f"наклеена")
+        self.etiketka=etiketka
     
-    def NalivGazirovki(self):
-        print(f"залита",end="")
-        self.gazirovka= PepsiGazirovka()
+    def NalivGazirovki(self,gazirovka):
+        print(f"залита")
+        self.gazirovka= gazirovka
     
-    def ZakrKriwkoi(self):
-        print(f"заркыто",end="")
-        self.kriwka=PepsiKriwka()
+    def ZakrKriwkoi(self,kriwka):
+        print(f"заркыто")
+        self.kriwka=kriwka
     
 class ColaBootle(Bootle):
     def __init__(self):
@@ -40,18 +40,18 @@ class ColaBootle(Bootle):
         self.kriwka = None
         self.gazirovka = None
         print("Взята Бутылка CocaColЫ")
-    def StickEtiketka(self):
-        print("наклеена",end="")
-        self.etikitka=ColaEtiketka()
+    def StickEtiketka(self,etiketka):
+        print("наклеена")
+        self.etikitka=etiketka
         #print(f"наклеена{ColaEtiketka()}")
     
-    def NalivGazirovki(self):
-        print("Залита",end="")
-        self.gazirovka = ColaGazirovka()
+    def NalivGazirovki(self,gazirovka):
+        print("Залита")
+        self.gazirovka = gazirovka
     
-    def ZakrKriwkoi(self):
-        print("закрыта",end="")
-        self.kriwka = ColaKriwka()
+    def ZakrKriwkoi(self,kriwka):
+        print("закрыта")
+        self.kriwka = kriwka
 
 class PepsiEtiketka(Etiketka):
     def __init__(self):
