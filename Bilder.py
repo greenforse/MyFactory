@@ -21,13 +21,12 @@ class Bilder():
         self.bootle.ZakrKriwkoi(kriwka)
 
     def bildProduct(self):
-        #self.setParam_1(n)
-        #self.setParam_2(n)
-        #self.setParam_3(n)
-        result=self.bootle
+        result = self.bootle.copy()
         return result
 
-class Prototipe():
-    def __init__(self,result):
-        self.result = result
-    #def copy(self):
+#class Prototipe():
+#    def __init__(self,bootle):
+#        self.bootle = bootle
+#    def copy(self):
+#        return self.bootle
+#

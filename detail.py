@@ -33,7 +33,12 @@ class PepsiBootle(Bootle):
     def ZakrKriwkoi(self,kriwka):
         print(f"заркыто")
         self.kriwka=kriwka
-    
+    def copy(self):
+        CopyBootle = PepsiBootle()
+        CopyBootle.etiketka = self.etiketka.copy()
+        CopyBootle.kriwka = self.kriwka.copy()
+        CopyBootle.gazirovka = self.gazirovka.copy()
+        return CopyBootle
 class ColaBootle(Bootle):
     def __init__(self):
         self.etikitka = None
@@ -52,27 +57,40 @@ class ColaBootle(Bootle):
     def ZakrKriwkoi(self,kriwka):
         print("закрыта")
         self.kriwka = kriwka
-
+    def copy(self):
+        CopyBootle = ColaBootle()
+        CopyBootle.etiketka=self.etikitka.copy()
+        CopyBootle.kriwka=self.kriwka.copy()
+        CopyBootle.gazirovka = self.gazirovka.copy()
+        return CopyBootle
 class PepsiEtiketka(Etiketka):
     def __init__(self):
         print (" Этикетка пепси")
-
+    def copy(self):
+        return PepsiEtiketka()
 class ColaEtiketka(Etiketka):
     def __init__(self):
         print (" Этикетка COLA")
-
+    def copy(self):
+        return ColaEtiketka()
 class PepsiKriwka(Kriwka):
     def __init__(self):
         print (" крышкой Пепси")
-
+    def copy(self):
+        return PepsiKriwka()
 class ColaKriwka(Kriwka):
-     def __init__(self):
+    def __init__(self):
         print (" крышкой Кола")
 
+    def copy(self):
+        return ColaKriwka()
 class ColaGazirovka(Gazirovka):
     def __init__(self):
         print (" газировка Cola")
-
+    def copy(self):
+        return ColaGazirovka()
 class PepsiGazirovka(Gazirovka):
     def __init__(self):
         print (" газировка pepsi")
+    def copy(self):
+        return PepsiGazirovka()
